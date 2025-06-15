@@ -1,5 +1,7 @@
 import validator from 'validator'
 import bcrypt from 'bcrypt'
+import {v2 as cloudniary} from 'cloudinary'
+import doctorModel from '../models/doctorModel'
 
 const addDoctor=async(req,res)=>{
     try {
@@ -25,9 +27,39 @@ const addDoctor=async(req,res)=>{
                 message:"Please enter a strong password"
             })
         }
+        const salt=await bcrypt.genSalt(10)
+        const hashedpassword=await bcrypt.hash(password,salt)
+
+        const imageUpload=await cloudniary.uploader.upload(imageFile.path,{resource_type:"image"})
+
+        const imageUrl=imageUpload.secure_url
+
+        const doctorData={
+            name,
+            email,
+            image:imageUrl,
+            password:hashedpassword,
+            speciality,
+            degree,
+            experience,
+            about,
+            fees,
+            address:JSON.parse(address),
+            date:Date.now()
+        }
+        const newDoctor=new doctorModel(doctorData)
+        await newDoctor.save()
+        res.json({
+            success:true,
+            message:"Doctor Added"
+        })
         
     } catch (error) {
-        
+        console.log(error)
+        res.json({
+            success:false,
+            message:error.message
+        })
     }
 }
 
