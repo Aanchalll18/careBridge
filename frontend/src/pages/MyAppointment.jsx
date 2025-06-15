@@ -7,13 +7,13 @@ const MyAppointment = () => {
 			<p className="text-2xl font-semibold mb-6">My Appointments</p>
 
 			<div className="grid gap-6">
-				{doctors.slice(0, 2).map((item, index) => (
+				{doctors.slice(0, 3).map((item, index) => (
 					<div
 						key={index}
 						className="flex gap-6 border rounded-xl p-4 shadow-md items-start bg-white"
 					>
 						{/* Doctor Image */}
-						<div className="w-24 h-24 flex-shrink-0">
+						<div className="w-24 h-24 flex-shrink-0 bg-blue-100 rounded-full p-1">
 							<img
 								src={item.image}
 								alt={item.name}
@@ -38,10 +38,10 @@ const MyAppointment = () => {
 
 						{/* Actions */}
 						<div className="flex flex-col gap-2 mt-4">
-							<button className="text-green-700 border-2 border-green-700 px-2 py-1 font-semibold hover:bg-green-100 rounded-sm">
+							<button className="text-green-700 border-2 border-green-700 px-2 py-1  hover:bg-green-100 rounded-sm">
 								Pay Online
 							</button>
-							<button className="text-red-700 border-2 border-red-700 px-4 py-1 font-semibold hover:bg-red-100 rounded-sm">
+							<button className="text-red-700 border-2 border-red-700 px-4 py-1  hover:bg-red-100 rounded-sm">
 								Cancel Appointment
 							</button>
 						</div>
