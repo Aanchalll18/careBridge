@@ -10,7 +10,7 @@ const SpecialityMenu = () => {
       <p className='sm:w-1/3 text-centre text-sm'>Simply browse through our extension list of trusted doctors, schedule your appointment hassle free.</p>
       <div className='flex sm:justify-centre gap-4 pt-5 w-full overflow-scroll'>
           {specialityData.map((item,index)=>(
-            <Link key={index} to={'/doctor/${item.speciality'}>
+            <Link onClick={()=>scrollTo(0,0)} className='flex flex-col items-centre text-xs cursor-pointer flex-shrink-0 hover:tranlate-y-[-10px] transition-all duration-500' key={index} to={'/doctor/${item.speciality'}>
                 <img className='w-16 sm:w-24 mb-2' src="item.image" alt="" />
                 <p>{item.speciality}</p>
             </Link>
