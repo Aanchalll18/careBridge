@@ -1,9 +1,13 @@
 import React from 'react'
+import { Routes,Route } from 'react-router-dom'
+import MyProfile from './pages/MyProfile'
 
 const App = () => {
   return (
     <div>
-      <h1 className='text-red-50'>hello</h1>
+      <Routes>
+        <Route path='/my-profile' element={<MyProfile/>}/>
+      </Routes>
     </div>
   )
 }
