@@ -69,7 +69,7 @@ const addDoctor = async (req, res) => {
 
         const imageFile = req.file; // Ensure imageFile exists and is valid
 
-        console.log({ email, password, speciality, degree, experience, about, fees, address, name, imageFile });
+        // console.log({ email, password, speciality, degree, experience, about, fees, address, name, imageFile });
 
         // Validate input
         if (
@@ -135,7 +135,7 @@ const addDoctor = async (req, res) => {
             experience,
             about,
             fees,
-            available: true,
+            
             address: typeof address === 'string' ? JSON.parse(address) : address,
             date: Date.now(),
         };
