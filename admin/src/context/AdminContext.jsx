@@ -3,8 +3,10 @@ import { createContext, useState } from "react";
 export const AdminContext = createContext();
 
 const AdminContextProvider = (props) => {
-  const [state, setState] = useState('Admin'); // example value
-  const value = [state, setState];
+  
+  const value = {
+
+  }
 
   return (
     <AdminContext.Provider value={value}>

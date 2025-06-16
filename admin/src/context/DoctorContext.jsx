@@ -3,12 +3,14 @@ import { createContext, useState } from "react";
 export const DoctorContext = createContext();
 
 const DoctorContextProvider = (props) => {
-  const [doctorInfo, setDoctorInfo] = useState(null);
-  const value = { doctorInfo, setDoctorInfo };
+ 
+  const value = { 
+    
+   };
 
   return (
     <DoctorContext.Provider value={value}>
-      {props.children} {/* ✅ fixed spelling */}
+      {props.children} 
     </DoctorContext.Provider>
   );
 };

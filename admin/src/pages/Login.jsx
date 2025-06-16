@@ -1,12 +1,24 @@
-import React, { useContext } from 'react'
-
+import React, { useState } from 'react'
 
 const Login = () => {
-    // const [state,setState]=useContext('Admin')
+     
+    const [state,setState]=useState('Admin')
+
+
   return (
-    <div>
-      <h1 className='text-red-400'>hello</h1>
-    </div>
+    <form>
+      <div>
+        <p><span>{state}</span></p>
+        <div>
+            <p>Email</p>
+            <input type="email" required />
+        </div>
+        <div>
+            <p>password</p>
+            <input type="password" required />
+        </div>
+      </div>
+    </form>
   )
 }
 
