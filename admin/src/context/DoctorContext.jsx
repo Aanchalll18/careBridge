@@ -1,16 +1,16 @@
-import { createContext } from "react";
+import { createContext, useState } from "react";
 
-export const DoctorContext=createContext()
+export const DoctorContext = createContext();
 
-const DoctorContextProvider=(props)=>{
-    const value={
+const DoctorContextProvider = (props) => {
+  const [doctorInfo, setDoctorInfo] = useState(null);
+  const value = { doctorInfo, setDoctorInfo };
 
-    }
-    return (
-        <DoctorContext.Provider value={value}>
-            {props.childern}
-        </DoctorContext.Provider>
-    )
-}
+  return (
+    <DoctorContext.Provider value={value}>
+      {props.children} {/* ✅ fixed spelling */}
+    </DoctorContext.Provider>
+  );
+};
 
 export default DoctorContextProvider;
