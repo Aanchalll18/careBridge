@@ -1,7 +1,7 @@
 import React from 'react'
 import { assets } from '../assets/assets'
 
-const Contect = () => {
+const Contact = () => {
   return (
     <div>
 
@@ -26,4 +26,4 @@ const Contect = () => {
   )
 }
 
-export default Contect
+export default Contact
