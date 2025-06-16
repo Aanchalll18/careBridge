@@ -9,7 +9,7 @@ const Appointment = () => {
   const {doctors, currencySymbol} = useContext(AppContext)
   const daysOfWeek = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT',]
 
-  const [DocInfo,setDocInfo] = useState(null)
+  const [docInfo,setDocInfo] = useState(null)
   const [docSlots,setDocSlot] = useState([])
   const [slotIndex,setSlotIndex] = useState(0)
   const [slotTime,setSlotTime] = useState('')
