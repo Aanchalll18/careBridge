@@ -4,6 +4,9 @@ import Navbar from './components/Navbar'
 import MyProfile from './pages/MyProfile'
 import MyAppointment from './pages/MyAppointment'
 import Home from './pages/Home'
+import Doctors from './pages/Doctors'
+import Login from '../../admin/src/pages/Login'
+import Abou
 
 const App = () => {
   return (

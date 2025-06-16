@@ -8,9 +8,7 @@ const addDoctor = async (req, res) => {
     try {
         const { email, password, speciality, degree, experience, about, fees, address, name } = req.body;
 
-        const imageFile = req.file; // Ensure imageFile exists and is valid
-
-        // console.log({ email, password, speciality, degree, experience, about, fees, address, name, imageFile });
+        const imageFile = req.file; 
 
         // Validate input
         if (
@@ -125,15 +123,5 @@ const loginAdmin=async(req,res)=>{
     }
 };
 
-// const allDoctors = async (req, res) => {
-//     try {
-//         const doctors = await doctorModel.find({}).select('-password');
-
-//         res.json({ success: true, doctors });
-//     } catch (e) {
-//         console.error(e);
-//         res.json({ success: false, message: e.message });
-//     }
-// };
 
 export {addDoctor,loginAdmin}
