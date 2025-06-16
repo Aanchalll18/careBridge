@@ -24,13 +24,13 @@ const About = () => {
       </div>
 
         <div className='flex flex-col md:flex-row mb-20'>
-            <div className='border px-10 md:px-16 py-8 sm:py-16 flex flex-col gap-5 text-[15px] hover:bg-primary hover:text-white transition-all duration-300 text-gray-600 cursor-pointer'>
+            <div className='border px-10 md:px-16 py-8 sm:py-16 flex flex-col gap-5 text-[15px] hover:bg-[#5f6fff] hover:text-white transition-all duration-300 text-gray-600 cursor-pointer'>
                 <b>Efficiency:</b>
                 <p>Steamlined appointment scheduling that fits into your busy lefestyle.</p>
             </div>
         </div>
         <div>
-            <div className='border px-10 md:px-16 py-8 sm:py-16 flex flex-col gap-5 text-[15px] hover:bg-primary hover:text-white transition-all duration-300 text-gray-600 cursor-pointer'>
+            <div className='border px-10 md:px-16 py-8 sm:py-16 flex flex-col gap-5 text-[15px] hover:bg-[#5f6fff] hover:text-white transition-all duration-300 text-gray-600 cursor-pointer'>
                 <b>Convenience:</b>
                 <p>Access to a network of trusted healthcare professionals in your area.</p>
             </div>
