@@ -17,7 +17,7 @@ const Appointment = () => {
   const fetchDocInfo = async () => {
     const docInfo = doctors.find(doc => doc._id === docId)
     setDocInfo(docInfo)
-    
+    console.log(docInfo)
   }
 
   const getAvailableSlot = async () => {
@@ -87,7 +87,7 @@ const Appointment = () => {
             <img className='w-5' src={assets.verified_icon} alt="" />
           </p>
           <div className='flex items-centre gap-2 text-sm mt-1 text-gray-600'>
-            <p>{docInfo.degree} = {docInfo.speciality}</p>
+            <p>{docInfo.degree} - {docInfo.speciality}</p>
           <button className='py-0.5 px-2 border text-xs rounded-full'>docInfo.experience</button>
           </div>
 
