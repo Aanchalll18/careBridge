@@ -15,7 +15,7 @@ const Appointment = () => {
   const [slotTime,setSlotTime] = useState('')
 
   const fetchDocInfo = async () => {
-    const DocInfo = doctors.find(doc => doc._id === docId)
+    const docInfo = doctors.find(doc => doc._id === docId)
     setDocInfo(docInfo)
     
   }
